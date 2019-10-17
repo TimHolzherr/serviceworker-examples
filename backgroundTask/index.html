@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Service Worker Test</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
+    <style></style>
+  </head>
+  <body>
+    <button onclick="doPointlessComputationsWithBlocking()">
+      Start Expensive Computation
+    </button>
+    <button onclick="callSw()">
+      Execute Expensive Computation in Service Worker
+    </button>
+    <div class="loader"></div>
+    <script>
+      navigator.serviceWorker.register("/sw.js");
+    </script>
+    <script src="/calculation.js"></script>
+  </body>
+</html>

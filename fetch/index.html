@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Service Worker Test</title>
+    <style>
+      body {
+        background: #dae2f8;
+        background: linear-gradient(
+          12deg,
+          #d6a4a4,
+          #dae2f8
+        ); 
+
+        margin-top: 300px;
+        height: 100vh;
+      }
+
+      button {
+        padding: 10px;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      navigator.serviceWorker.register("/sw.js");
+    </script>
+    <script src="/does-not-exist.js"></script>
+  </body>
+</html>
